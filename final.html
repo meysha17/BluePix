@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decorate & Download</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Assets/fish-photobooth/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="StyleSheets/final.css" />
+</head>
+<body>
+  <div class="logo">
+    <img src="Assets/fish-photobooth/logo-new.png" alt="Logo">
+  </div>
+
+  <div class="heading-content">
+    <div class="menu-header" style="display: none;"></div>
+    <div class="sticker-container">
+      <h1>Add Stickers!</h1>
+      <p>(drag to reposition)</p>
+      <div class="sticker-btns">
+        <button id="addFish" class="sticker-btn fish-btn">Add Fish</button>
+        <button id="addOctopus" class="sticker-btn octopus-btn">Add Octopus</button>
+        <button id="addSeaweed" class="sticker-btn seaweed-btn">Add Seaweed</button>
+        <button id="addAx" class="sticker-btn axolotl-btn">Add Axolotl</button>
+        <button id="addBubble" class="sticker-btn bubble-btn">Add Bubble</button>
+        <button id="reset" class="sticker-btn reset-btn">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="canvasContainer">
+    <canvas id="finalCanvas" width="1176" height="1470"></canvas>
+  </div>
+
+  <div class="button-container">
+    <button id="downloadBtn">Download</button>
+    <button id="homeBtn">Home</button>
+  </div>
+
+  <script type="module" src="Javascripts/final.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Assets/fish-photobooth/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="StyleSheets/camera.css" />
+</head>
+<body>
+  <div class="logo">
+    <img src="Assets/fish-photobooth/logo-new.png" alt="Logo">
+  </div>
+
+  <div class="photobooth-container" id="booth">
+    <!-- ❌ bubble-container DIHAPUS -->
+    <div class="countdown-timer">3</div>
+    <canvas id="finalCanvas" width="1176" height="1470"></canvas>
+    <video id="liveVideo" autoplay playsinline muted></video>
+    <img class="frame-overlay" src="Assets/fish-photobooth/camerapage/frame.png" alt="frame overlay" />
+  </div>
+
+  <div class="controls">
+    <button id="takePhoto">Capture</button>
+    <button id="readyButton" disabled style="display: none;">Ready</button>
+  </div>
+
+  <script src="Javascripts/camera.js"></script>
+  <!-- ❌ bubbles.js DIHAPUS -->
+</body>
+</html>

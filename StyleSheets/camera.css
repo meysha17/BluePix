@@ -1,0 +1,147 @@
+
+/* root variables */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* logo section */
+.logo {
+  position: relative;
+  width: 80px;
+  padding-bottom: 1vh;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* photobooth container */
+.photobooth-container {
+  position: relative;
+  width: 60vmin;
+  max-width: 588px;
+  aspect-ratio: 588 / 735;
+  background: #D5E8EB;
+  overflow: hidden;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .photobooth-container {
+    width: 90vw;
+    max-width: none;
+    aspect-ratio: 588 / 735;
+  }
+}
+
+/* countdown timer */
+.countdown-timer {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.66669rem;
+  height: 2.8rem;
+  padding: 0.8485rem;
+  border-radius: 0.75rem;
+  border: 1.358px solid #1E1E1E;
+  background: #FFF;
+  color: #1E1E1E;
+  text-align: center;
+  font-family: Castoro, serif;
+  font-size: 1.697rem;
+  font-weight: 400;
+  line-height: 1;
+  pointer-events: none;
+  transition: none;
+}
+
+/* canvas and video */
+#finalCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#liveVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  transform: scaleX(-1);
+  z-index: 1;
+  display: none;
+}
+
+/* frame overlay */
+.frame-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* ✅ penting */
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* controls */
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* buttons */
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--main-text);
+  font-family: Castoro, serif;
+  font-weight: 400;
+  background-color: var(--white);
+  border: 1px solid #1e1e1e;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#takePhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.56169rem;
+  width: 10rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  background-color: #FFF;
+}
+
+/* ✅ bubble CSS DIHAPUS TOTAL */

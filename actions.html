@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Choose Action</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Assets/fish-photobooth/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="StyleSheets/home.css" />
+</head>
+<body>
+  <div class="logo">
+    <img src="Assets/fish-photobooth/logo-new.png" alt="Logo">
+  </div>
+
+  <div class="menu-container" style="gap: 1rem; margin-top: 2rem;">
+    <h1 style="font-size:1.6rem; color:#2a4a53;">Use the selected frame</h1>
+
+    <!-- ✅ align-items:center biar tombolnya rapi di tengah -->
+    <div class="button-container" style="display:flex; flex-direction:column; gap:1rem; align-items:center;">
+      <button id="camera-action">Take photos</button>
+      <button id="upload-action">Upload photos</button>
+    </div>
+  </div>
+
+  <script>
+    // Baca pilihan frame dari query / localStorage
+    const params = new URLSearchParams(location.search);
+    const saved  = JSON.parse(localStorage.getItem('selectedFrame') || '{}');
+
+    const frameId  = params.get('frameId')  || saved.id;
+    const frameSrc = params.get('frameSrc') || saved.src;
+
+    // Kalau user masuk actions tanpa pilih frame, balik ke menu
+    if (!frameSrc) location.href = 'menu.html';
+
+    // Navigate ke camera/upload sambil membawa frame
+    document.getElementById('camera-action').addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = new URL('camera.html', location.origin);   // ✅ ROOT
+      url.searchParams.set('frameId', frameId || '');
+      url.searchParams.set('frameSrc', frameSrc);
+      location.href = url.toString();
+    });
+
+    document.getElementById('upload-action').addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = new URL('upload.html', location.origin);   // ✅ ROOT (sesuaikan kalau beda)
+      url.searchParams.set('frameId', frameId || '');
+      url.searchParams.set('frameSrc', frameSrc);
+      location.href = url.toString();
+    });
+
+    // Logo klik balik ke index
+    const logo = document.querySelector('.logo');
+    if (logo) logo.addEventListener('click', () => location.href = 'index.html');
+  </script>
+</body>
+</html>

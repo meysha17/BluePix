@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload</title>
+
+  <link rel="icon" href="Assets/fish-photobooth/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="StyleSheets/camera.css" />
+  <style>
+    #uploadPhotoInput { display: none; }
+
+    /* supaya drag di mobile gak nge-scroll */
+    #finalCanvas { touch-action: none; }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="Assets/fish-photobooth/logo-new.png" alt="Logo">
+  </div>
+
+  <div class="photobooth-container" id="booth">
+    <canvas id="finalCanvas" width="1176" height="1470"></canvas>
+
+    <input type="file" id="uploadPhotoInput" accept="image/*" />
+
+    <img class="frame-overlay" id="frameOverlay" alt="frame overlay" />
+  </div>
+
+  <div class="controls">
+    <button id="uploadPhoto">Upload Photo</button>
+    <button id="readyButton" disabled style="display:none;">Ready</button>
+  </div>
+
+  <script src="Javascripts/upload.js"></script>
+</body>
+</html>
