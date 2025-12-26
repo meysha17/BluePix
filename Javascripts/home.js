@@ -3,9 +3,9 @@
 // constants (animasi assets)
 // ==============================
 const BUBBLE_FRAMES = [
-  'Assets/fish-photobooth/homepage/animated-bubbles-home/bubble-1.png',
-  'Assets/fish-photobooth/homepage/animated-bubbles-home/bubble-2.png',
-  'Assets/fish-photobooth/homepage/animated-bubbles-home/bubble-3.png',
+  'Assets/fish-photobooth/homepage/animated-sparkles-home/sparkle-1.png',
+  'Assets/fish-photobooth/homepage/animated-sparkles-home/sparkle-2.png',
+  'Assets/fish-photobooth/homepage/animated-sparkles-home/sparkle-3.png',
 ];
 
 const PHOTOBOOTH_FRAMES = Array.from({ length: 16 }, (_, i) =>

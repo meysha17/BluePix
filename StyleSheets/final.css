@@ -132,10 +132,10 @@ button:hover {
 }
 
 /* individual sticker urls */
-.fish-btn { background-image: url("../Assets/fish-photobooth/finalpage/fishButton.png"); }
-.octopus-btn { background-image: url("../Assets/fish-photobooth/finalpage/octopusButton.png"); }
-.seaweed-btn { background-image: url("../Assets/fish-photobooth/finalpage/seaweedButton.png"); }
-.axolotl-btn { background-image: url("../Assets/fish-photobooth/finalpage/axolotlButton.png"); }
+.fish-btn { background-image: url("../Assets/fish-photobooth/finalpage/spiderButton.png"); }
+.octopus-btn { background-image: url("../Assets/fish-photobooth/finalpage/antennaButton.png"); }
+.seaweed-btn { background-image: url("../Assets/fish-photobooth/finalpage/starButton.png"); }
+.axolotl-btn { background-image: url("../Assets/fish-photobooth/finalpage/rocketButton.png"); }
 .bubble-btn { background-image: url("../Assets/fish-photobooth/finalpage/bubbleButton.png"); }
 .reset-btn { background-image: url("../Assets/fish-photobooth/finalpage/resetButton.png"); }
 

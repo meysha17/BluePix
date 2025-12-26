@@ -97,16 +97,11 @@ canvas.addEventListener('touchend', pointerUp);
 canvas.addEventListener('touchcancel', pointerUp);
 
 // stickers
-addFishBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/fish.png'));
-addOctopusBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/octopus.png'));
-
-const seaweedImages = ['Assets/fish-photobooth/camerapage/stickers/seaweed1.png','Assets/fish-photobooth/camerapage/stickers/seaweed2.png'], 
-      bubbleImages = ['Assets/fish-photobooth/camerapage/stickers/bubble1.png','Assets/fish-photobooth/camerapage/stickers/bubble2.png'];
-let seaweedIndex = 0, bubbleIndex = 0;
-
-addSeaweedBtn.addEventListener('click', () => { addSticker(seaweedImages[seaweedIndex]); seaweedIndex = (seaweedIndex + 1) % seaweedImages.length; });
-addAxBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/axolotl.png'));
-addBubbleBtn.addEventListener('click', () => { addSticker(bubbleImages[bubbleIndex]); bubbleIndex = (bubbleIndex + 1) % bubbleImages.length; });
+addFishBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/spider.png'));
+addOctopusBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/antenna.png'));
+addSeaweedBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/star1.png'));
+addAxBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/rocket.png'));
+addBubbleBtn.addEventListener('click', () =>addSticker('Assets/fish-photobooth/camerapage/stickers/bubble.png'));
 
 // reset
 resetBtn.addEventListener('click', () => { stickers = []; drawCanvas(); });
